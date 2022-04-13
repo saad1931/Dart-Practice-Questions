@@ -1,19 +1,20 @@
 import 'dart:io';
-void main() 
+void main()
 {
-
-  print("Enter a number:");
-  int n1=int.parse(stdin.readLineSync()!);
-  factorial(n1);
-
+  pyramid();
 }
 
-factorial(n)//n==3
+pyramid()
 {
-  int fac=1;
-  for(int i=n;i>1;i--)//i=3,2
+  int c=1;//1,2,3,4
+  for(int i=1;i<5;i++)//1,2,3,4
   {
-    fac=fac*i;//3,6  
+    for(int j=1;j<=i;j++)//1,12,123,1234
+    {
+       stdout.write(c);//1,22,333,4444 
+    }
+    stdout.writeln(" ");
+    c++;
   }
-  print("Factorial of $n = $fac");
+  
 }
